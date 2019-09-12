@@ -9,6 +9,29 @@ body {
   line-height: 1.4;
 }
 
+.nav-bar {
+  list-style-type: none;
+  margin: 1px;
+  padding: 1px;
+}
+
+.b-left {
+	
+	float: left;
+}
+
+.b-right {
+	
+	float: right;
+}
+
+.nav-bar li {
+	
+	display: inline-block;
+	color: red;
+	margin: 12px;
+}
+
 a {
   color: #333;
   text-decoration: none;
