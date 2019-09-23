@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../css/Login.css';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 
 export default class HomePage extends Component {
@@ -6,8 +7,9 @@ export default class HomePage extends Component {
     return (
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Spartan Sells</a>
-          <img src="/images /log.png" alt=""></img>
+          {/* <a class="navbar-brand" href="#">Spartan Sells</a> */}
+          <img src="https://i.ibb.co/Cs7zcLs/spartan-Sells.jpg" width="60" height="60" alt="spartan-Sells"/>
+          {/*<img src="https://image.flaticon.com/icons/png/512/21/21294.png" class={""/*"img-responsive"*/}
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -21,15 +23,7 @@ export default class HomePage extends Component {
               </li>
             </ul>
           </div>
-        </nav>  
-
-
-        <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="#home">Spartan Sells</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="/Login">Login</Nav.Link>
+          <Nav className="mr-auto">
               <NavDropdown title="User" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Rating</NavDropdown.Item>
                 {/* <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item> */}
@@ -38,14 +32,26 @@ export default class HomePage extends Component {
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">Configuration</NavDropdown.Item>
               </NavDropdown>
+              <Nav.Link href="/Login">Login</Nav.Link>
             </Nav>
-            <Form inline>
+        </nav>  
+
+
+        <Navbar bg="light" expand="lg">
+          <Navbar.Brand href="#home">Spartan Sells</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+
+            <Form   inline>
               <FormControl type="text" placeholder="Search" className="mr-sm-2" />
               <Button variant="outline-success">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>
-      </div>
+
+
+
+   </div>
     );
   }
 }
