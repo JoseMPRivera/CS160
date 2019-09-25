@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/Login.css';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Carousel } from 'react-bootstrap';
 
 export default class HomePage extends Component {
   render() {
@@ -8,7 +8,7 @@ export default class HomePage extends Component {
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           {/* <a class="navbar-brand" href="#">Spartan Sells</a> */}
-          <img src="https://i.ibb.co/Cs7zcLs/spartan-Sells.jpg" width="60" height="60" alt="spartan-Sells"/>
+          <img src="https://i.ibb.co/VBw9f9S/Spartan-Sells-Logo-2x.png" width="60" height="60" alt="spartan-Sells"/>
           {/*<img src="https://image.flaticon.com/icons/png/512/21/21294.png" class={""/*"img-responsive"*/}
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,43 @@ export default class HomePage extends Component {
           </Navbar.Collapse>
         </Navbar>
 
+  <Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="holder.js/800x400?text=First slide&bg=373940"
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="holder.js/800x400?text=Second slide&bg=282c34"
+      alt="Third slide"
+    />
 
+    <Carousel.Caption>
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="holder.js/800x400?text=Third slide&bg=20232a"
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
 
    </div>
     );
