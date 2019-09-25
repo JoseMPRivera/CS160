@@ -8,7 +8,8 @@ export default class HomePage extends Component {
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           {/* <a class="navbar-brand" href="#">Spartan Sells</a> */}
-          <img src="https://i.ibb.co/VBw9f9S/Spartan-Sells-Logo-2x.png" width="60" height="60" alt="spartan-Sells"/>
+          {/* <img src="https://i.ibb.co/VBw9f9S/Spartan-Sells-Logo-2x.png" width="60" height="60" alt="spartan-Sells"/> */}
+          <img src= {require ("./image/SpartanSells.png")} width="60" height="60" alt="spartan-Sells" />
           {/*<img src="https://image.flaticon.com/icons/png/512/21/21294.png" class={""/*"img-responsive"*/}
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,7 +54,8 @@ export default class HomePage extends Component {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=First slide&bg=373940"
+      src={require ("./image/carousel1.jpg")}
+      height="300"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -64,8 +66,9 @@ export default class HomePage extends Component {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=Second slide&bg=282c34"
-      alt="Third slide"
+      src={require ("./image/carousel2.jpg")}
+      height="300"
+      alt="Second slide"
     />
 
     <Carousel.Caption>
@@ -76,7 +79,8 @@ export default class HomePage extends Component {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="holder.js/800x400?text=Third slide&bg=20232a"
+      src={require ("./image/carousel3.jpg")}
+      height="300"
       alt="Third slide"
     />
 
