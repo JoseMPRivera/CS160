@@ -1,25 +1,51 @@
 .vl {
   border-left: 2px solid black;
-  height: 250px;
-  position: absolute;
+  height: 150px;
+  width: 100px;
+  position: float-center;
   left: 50%;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-left: -3px;
   top: 0;
+  
 }
 
-.active-cyan-2 input[type=text]:focus:not([readonly]) {
-  border-bottom: 1px solid #4dd0e1;
-  box-shadow: 0 1px 0 0 #4dd0e1;
+
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 90px;
+    /* background-color: #4dd0e1; */
   }
 
-  .input-group.md-form.form-sm.form-1 input{
-    border: 1px solid #bdbdbd;
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
-    }
-    .input-group.md-form.form-sm.form-2 input {
-    border: 1px solid #bdbdbd;
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
-    }
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+  #rightLogin {
+    float: left;
+    margin: 0px 0px 0px 160px;
+  }
+
+  .separator { 
+    width: 6px; /* Line width */
+      background-color: black; /* Line color */
+      /* height: 100%; Override in-line if you want specific height. */
+      float: left;
+  }
+  
+  #rightSignUp {
+    /* background-color: aquamarine; */
+    float: left;
+    /* max-width: 320px; */
+    /* margin: 0px 170px; */
+    padding: 90px;
+  }
+
+  #rightSignUp form{
+    /* margin: 0 170px; */
+    max-width: 320px;
+  }
+
+
+}

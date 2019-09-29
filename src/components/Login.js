@@ -1,20 +1,41 @@
 import React, { Component } from 'react';
 import '../css/Login.css';
+import { Nav, NavDropdown } from 'react-bootstrap';
 
 export default class Login extends Component {
   render() {
     return (
-      <div>
-        <ul class="nav-bar">
-          <li class="b-left"><a href="#home">Spartan Sell</a></li>
-          <li class="b-right"><a href="#clients">Signup</a></li>  
-          <li class="b-right"><a href="#contact">Login</a></li>
-        </ul>	
 
-        <div class="vl"></div>
-
-
+      <form><div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <img src= {require ("./image/SpartanSells.png")} width="60" height="60" alt="spartan-Sells" />
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+          </div>
+          <Nav className="mr-auto">
+              <NavDropdown title="User" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Rating</NavDropdown.Item>
+                <NavDropdown.Item href="/Profile">Profile</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Selling</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">Configuration</NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="/signUp">Sign Up</Nav.Link>
+            </Nav>
+        </nav>  
       </div>
+
+      </form>
     );
   }
 }
