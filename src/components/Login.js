@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, FormGroup, FormControl } from "react-bootstrap";
 import '../css/Login.css';
 import { faTextWidth } from '@fortawesome/free-solid-svg-icons';
+import { Nav, NavDropdown } from 'react-bootstrap';
 
 export default class Login extends Component {
   constructor(props) {
