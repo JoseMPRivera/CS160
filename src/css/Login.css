@@ -10,6 +10,17 @@
   
 }
 
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
 .active-cyan-2 input[type=text]:focus:not([readonly]) {
   border-bottom: 1px solid #4dd0e1;
   box-shadow: 0 1px 0 0 #4dd0e1;

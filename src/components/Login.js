@@ -26,6 +26,7 @@ export default class Login extends Component {
   }
   render() {
     return (
+      <form>
       <div>
         <ul class="nav-bar">
           <li class="b-left"><a href="#home">Spartan Sell</a></li>
@@ -35,7 +36,10 @@ export default class Login extends Component {
 
         <div class="vl"></div>
         <div className = "Login">
-          <form onSubmit={this.handleSubmit}>
+          <form class="" onSubmit={this.handleSubmit}>
+            <div class="form-group row">
+            <label class="col-sm-3"> Email </label>
+            <div class="col-sm-8">
             <FormGroup controlId="email" bsSize="small">
               <FormControl
                 autoFocus
@@ -44,7 +48,11 @@ export default class Login extends Component {
                 onChange={this.trackChange}
                 />
             </FormGroup>
-
+            </div>
+            </div>
+            <div class="form-group row">
+            <label class="col-sm-3"> Password </label>
+            <div class="col-sm-8">
             <FormGroup controlId="password" bsSize="medium">
               <FormControl
                 autoFocus
@@ -53,19 +61,25 @@ export default class Login extends Component {
                 onChange={this.trackChange}
                 />
             </FormGroup>
-
-            <Button
-            block
-            bsSize="large"
-            disabled={!this.validateForm()}
-            type="submit"
-          >
-            Login
-          </Button>
+            </div>
+            </div>
+            <div class="form-group row">
+            <div class="col-sm-11">
+              <Button
+              block
+              bsSize="large"
+              disabled={!this.validateForm()}
+              type="submit"
+              >
+                Login
+              </Button>
+            </div>
+            </div>
           </form>
         </div>
 
       </div>
+      </form>
     );
   }
 }
