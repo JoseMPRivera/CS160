@@ -59,7 +59,7 @@ export default class Login extends Component {
 
 
       <div>
-        <div class="vl"></div>
+        {/* <div class="vl"></div> */}
         <div className = "Login">
           <form class="" onSubmit={this.handleSubmit}>
             <div class="form-group row">
