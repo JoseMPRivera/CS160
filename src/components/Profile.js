@@ -30,7 +30,7 @@ export default class Profile extends Component {
                 </div>
 
                 <div class="profile-usermenu">
-                  <ul class="nav">
+                  <ul class="profile-nav">
                     <li class="active">
                       <a href="#">
                       <FontAwesomeIcon icon={faHome}/>
