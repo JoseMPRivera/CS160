@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import '../css/Login.css';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Carousel } from 'react-bootstrap';
+import HomeBar from './HomeBar';
 
 export default class HomePage extends Component {
   render() {
     return (
       <div>
+<<<<<<< HEAD
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           {/* <a class="navbar-brand" href="#">Spartan Sells</a> */}
           {/* <img src="https://i.ibb.co/VBw9f9S/Spartan-Sells-Logo-2x.png" width="60" height="60" alt="spartan-Sells"/> */}
@@ -38,6 +40,9 @@ export default class HomePage extends Component {
             </Nav>
         </nav>  
 
+=======
+        <HomeBar />
+>>>>>>> 5488c815892242f8aeac21abaf11c07601f2fdf4
 
         <Navbar bg="light" expand="lg">
           <Navbar.Brand href="#home">Spartan Sells</Navbar.Brand>
