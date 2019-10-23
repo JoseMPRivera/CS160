@@ -5,6 +5,7 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/HomePage'
 import Login from './components/Login'
 import signUp from './components/signUp'
+import Rating from './components/Rating'
 import Profile from './components/Profile'
 import './App.css';
 
@@ -49,6 +50,7 @@ render() {
       <Route path="/" exact component={Home} />
       <Route path="/Login" component={Login} />
       <Route path="/signUp" component={signUp} />
+      <Route path="/Rating" component={Rating} />
       <Route path="/Profile" component={Profile} />
       <p className="App-intro">{this.state.data}</p>
     </Router>

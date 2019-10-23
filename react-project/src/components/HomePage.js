@@ -26,7 +26,7 @@ export default class HomePage extends Component {
           </div>
           <Nav className="mr-auto">
               <NavDropdown title="User" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Rating</NavDropdown.Item>
+                <NavDropdown.Item href="/Rating">Rating</NavDropdown.Item>
                 {/* <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item> */}
                 <NavDropdown.Item href="/Profile">Profile</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Selling</NavDropdown.Item>
