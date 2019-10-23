@@ -21,7 +21,8 @@ export default class HomePage extends Component {
           </Navbar.Collapse>
         </Navbar>
 
-  <Carousel>
+  <div class ="carousel-homepage">
+  <Carousel >
   <Carousel.Item>
     <img
       className="d-block w-100"
@@ -61,6 +62,7 @@ export default class HomePage extends Component {
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
+</div>
 
    </div>
     );
