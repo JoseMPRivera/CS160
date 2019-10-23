@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import '../css/Profile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faFlag } from '@fortawesome/free-solid-svg-icons'
+import HomeBar from './HomeBar'
 
 export default class Profile extends Component {
 
   render() {
     return (
+      <div>
+        <HomeBar />
         <div class="container">
           <div class="row profile">
             <div class="col-md-3">
@@ -60,6 +63,7 @@ export default class Profile extends Component {
 
           </div>
         </div>
+      </div>
     );
   }
 }
