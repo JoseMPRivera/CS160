@@ -34,6 +34,7 @@ export default class HomePage extends Component {
                 <NavDropdown.Item href="#action/3.4">Configuration</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="/Login">Login</Nav.Link>
+              <Nav.Link href="/signUp">Sign Up</Nav.Link>
             </Nav>
         </nav>  
 
