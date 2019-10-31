@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 5000;
+const port = 5000 || process.env.PORT;
 
 // console.log that your server is up and running
 app.listen(port, () => console.log(`Listening on port ${port}`));
@@ -18,6 +18,8 @@ var con = mysql.createConnection({
   password: "sh100",
   database: "cs160"
 });
+
+require('./routes/')(app, con, {});
 
 con.connect(function(err) {
   if (err) throw err;
