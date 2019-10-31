@@ -74,6 +74,12 @@ export default class Login extends Component {
               >
                 Login
               </Button>
+              <br></br>
+              Don't have an account? Click 
+              <a href="/signUp">
+               {' '} here
+             </a>
+
             </div>
             </div>
           </form>

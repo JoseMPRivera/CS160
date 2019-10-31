@@ -11,7 +11,7 @@ export default class HomePage extends Component {
         <HomeBar />
 
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="#home">Spartan Sells</Navbar.Brand>
+          <Navbar.Brand href="/">Spartan Sells</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
 

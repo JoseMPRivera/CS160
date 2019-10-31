@@ -15,7 +15,7 @@ class HomeBar extends Component {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#">Disabled</a>
@@ -24,7 +24,7 @@ class HomeBar extends Component {
         </div>
         <Nav className="mr-auto">
             <NavDropdown title="User" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Rating</NavDropdown.Item>
+              <NavDropdown.Item href="/Rating">Rating</NavDropdown.Item>
               {/* <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item> */}
               <NavDropdown.Item href="/Profile">Profile</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Selling</NavDropdown.Item>
