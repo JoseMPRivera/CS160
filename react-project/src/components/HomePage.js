@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/Login.css';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Carousel } from 'react-bootstrap';
 import HomeBar from './HomeBar';
+import Search from './Search';
 
 export default class HomePage extends Component {
   render() {
@@ -20,7 +21,7 @@ export default class HomePage extends Component {
             </Form>
           </Navbar.Collapse>
         </Navbar>
-
+      <Search />
   <div class ="carousel-homepage">
   <Carousel >
   <Carousel.Item>
