@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import Suggestions from './Suggestions'
 
-class Search extends Component {
+export default class Search extends Component {
+  
   state = {
     query: '',
     results: []
@@ -13,7 +14,7 @@ class Search extends Component {
       .then(({ data }) => {
         console.log(data)
         this.setState({
-          results: data.data
+          results: data.items
         })
       })
   }
@@ -26,7 +27,6 @@ class Search extends Component {
         if (this.state.query.length % 2 === 0) {
           this.getInfo()
         }
-      } else if (!this.state.query) {
       }
     })
   }
@@ -44,5 +44,3 @@ class Search extends Component {
     )
   }
 }
-
-export default Search
