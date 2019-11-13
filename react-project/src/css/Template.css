@@ -1,0 +1,20 @@
+.gallery {
+    border-style: solid;
+    border-color: #6D7993;
+    width:25%;
+    background-color: #9099A2;
+    margin: 9px;
+  }
+
+
+.inner {
+  display: table;
+  margin: 0 auto;
+  padding: 15px;  
+
+}
+
+#productImg {
+    display: table;
+  margin: 0 auto;
+}

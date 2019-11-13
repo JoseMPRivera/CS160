@@ -9,7 +9,7 @@ class Search extends Component {
   }
 
   getInfo = () => {
-    axios.get('http://localhost:5000/items')
+    axios.get('/items')
       .then(({ data }) => {
         console.log(data)
         this.setState({
@@ -39,7 +39,7 @@ class Search extends Component {
           ref={input => this.search = input}
           onChange={this.handleInputChange}
         />
-        <Suggestions results={this.state.results} />
+        {/* <Suggestions results={this.state.results} /> */}
       </form>
     )
   }
