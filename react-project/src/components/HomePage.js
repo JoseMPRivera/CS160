@@ -4,6 +4,7 @@ import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Carousel } from 'r
 import HomeBar from './HomeBar';
 import Search from './Search';
 import ItemsContainer from './ItemsContainer';
+// import Upload from './Upload';
 
 export default class HomePage extends Component {
   render() {
@@ -71,6 +72,7 @@ export default class HomePage extends Component {
 </div>
 
 <ItemsContainer/>
+{/* <Upload/> */}
 
    </div>
     );
