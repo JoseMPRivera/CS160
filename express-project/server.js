@@ -12,6 +12,41 @@ app.get('/express_backend', (req, res) => {
 
 var mysql = require('mysql');
 
+app.post('/upload2', (req, res, next) => {
+  console.log("\n\n\n ===========================================================\n\n");
+  //let imageFile = req.files.file;
+
+  console.log(req + "     " );
+
+  // comsole.log(imageFile);
+  res.send(req);
+
+});
+
+
+app.post('/upload', (req, res, next) => {
+  console.log(req);
+  let imageFile = req.files.file;
+
+  imageFile.mv(`${__dirname}/public/${req.body.filename}.jpg`, function(err) {
+    if (err) {
+      return res.status(500).send(err);
+    }
+
+    res.json({file: `public/${req.body.filename}.jpg`});
+  });
+
+})
+
+
+
+app.post('/upload1', (req, res) => {
+  console.log("YESSSSSSSSSSSSSSSSSSSSSSSS");
+  console.log(req.files.foo); // the uploaded file object
+
+  res.send("We are working on it");
+});
+
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",

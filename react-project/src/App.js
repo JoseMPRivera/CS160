@@ -7,6 +7,7 @@ import Login from './components/Login'
 import signUp from './components/signUp'
 import Rating from './components/Rating'
 import Profile from './components/Profile'
+import SellItem from './components/SellTemplate'
 import './App.css';
 
 
@@ -52,6 +53,7 @@ render() {
       <Route path="/signUp" component={signUp} />
       <Route path="/Rating" component={Rating} />
       <Route path="/Profile" component={Profile} />
+      <Route path="/SellItem" component={SellItem} />
       <p className="App-intro">{this.state.data}</p>
     </Router>
     
