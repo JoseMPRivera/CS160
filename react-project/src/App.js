@@ -9,7 +9,6 @@ import Rating from './components/Rating'
 import Profile from './components/Profile'
 import SellItem from './components/SellTemplate'
 import SearchResults from './components/SearchResults' 
-import Upload from './components/Upload' 
 import './App.css';
 import Search from './components/Search';
 
@@ -57,7 +56,6 @@ render() {
       <Route path="/Rating" component={Rating} />
       <Route path="/Profile" component={Profile} />
       <Route path="/SellItem" component={SellItem} />
-      <Route path="/Upload" component={Upload} />
       <Route path="/SearchResults" component={SearchResults} />
       <p className="App-intro">{this.state.data}</p>
     </Router>
