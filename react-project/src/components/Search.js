@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import axios from 'axios';
+import axios from 'axios'
 import Suggestions from './Suggestions'
+import { Redirect } from 'react-router-dom'
 
 export default class Search extends Component {
   
   state = {
     query: '',
-    results: []
+    results: [],
+    redirect: false
   }
 
   getInfo = () => {
@@ -34,15 +36,24 @@ export default class Search extends Component {
   }
 
   render() {
+    if (this.state.redirect === true) {
+      this.state.redirect = false
+      return <Redirect push to={'/SearchResults/' + this.search.value} />
+    }
+
     return (
-      <form>
+      <div>
         <input
           placeholder="Search"
           ref={input => this.search = input}
           onChange={this.handleInputChange}
+          onKeyPress={event => {
+            if (event.key === 'Enter')
+              this.setState({ redirect : true }, console.log("enter"))
+          }}
         />
-        <Suggestions results={this.state.results} query={this.state.query} />
-      </form>
+        <Suggestions results={this.state.results} />
+      </div>
     )
   }
 }

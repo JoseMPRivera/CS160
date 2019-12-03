@@ -7,7 +7,8 @@ import Login from './components/Login'
 import signUp from './components/signUp'
 import Rating from './components/Rating'
 import Profile from './components/Profile'
-import SearchResults from './components/SearchResults' 
+import SearchResults from './components/SearchResults'
+import SearchResult from './components/SearchResult'
 import './App.css';
 import Search from './components/Search';
 
@@ -55,6 +56,7 @@ render() {
       <Route path="/Rating" component={Rating} />
       <Route path="/Profile" component={Profile} />
       <Route path="/SearchResults/:query" component={SearchResults} />
+      <Route path="/SearchResult" component={SearchResult} />
       <p className="App-intro">{this.state.data}</p>
     </Router>
     

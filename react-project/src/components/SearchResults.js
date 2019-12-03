@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 
 export default class SearchResults extends Component {
@@ -26,11 +27,22 @@ export default class SearchResults extends Component {
   render() {
     return (
       <div>
-        Results for '{this.state.query}'
-        {this.state.results.map(result => (
+        Results for '{this.state.query}' <br /><br />
+        {this.state.results.map((result, index) => (
           <ul>
             <li key={result.item_id}>
-              <label> {result.name} <br /> {result.description} <br /> price: {result.price} </label>
+              <Link to={{
+                pathname: '/SearchResult', 
+                state: { 
+                  result : result
+                }
+              }}>
+                <label> 
+                  name: {result.name} <br />
+                  description: {result.description} <br />
+                  price: ${result.price} 
+                </label>
+              </Link>
             </li>
           </ul>)
         )}
