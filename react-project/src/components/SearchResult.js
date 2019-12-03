@@ -6,9 +6,9 @@ export default class SearchResult extends Component {
     result: {}
   }
 
-  componentDidMount() {
-    this.setState({ result: this.props.location.state.result }, console.log('result = ' + this.state.result))
-  }
+  // componentDidMount() {
+  //   this.setState({ result: this.props.location.state.result }, console.log('result = ' + this.state.result))
+  // }
 
   render() {
     const {result} = this.props.location.state

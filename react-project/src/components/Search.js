@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Suggestions from './Suggestions'
 import { Redirect } from 'react-router-dom'
+import { FormControl } from 'react-bootstrap'
 
 export default class Search extends Component {
   
@@ -12,7 +13,7 @@ export default class Search extends Component {
   }
 
   getInfo = () => {
-    axios.get(`/items/${this.state.query}`)
+    axios.get(`/search/${this.state.query}`)
       .then(({ data }) => {
         console.log(data)
         this.setState({
@@ -43,7 +44,9 @@ export default class Search extends Component {
 
     return (
       <div>
-        <input
+        <FormControl
+          list="encodings"
+          className="mr-sm-2"
           placeholder="Search"
           ref={input => this.search = input}
           onChange={this.handleInputChange}
@@ -52,7 +55,10 @@ export default class Search extends Component {
               this.setState({ redirect : true }, console.log("enter"))
           }}
         />
-        <Suggestions results={this.state.results} />
+        {/* <Suggestions results={this.state.results} /> */}
+        <datalist id="encodings" onChange={() => this.setState({ redirect : true }, console.log("enter"))}>
+          <Suggestions results={this.state.results} />
+        </datalist>
       </div>
     )
   }

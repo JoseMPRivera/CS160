@@ -2,15 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Suggestions = (props) => {
-  return <ul>
-    {props.results.map(r => (
-      <li key={r.item_id}>
-        <Link to={'/SearchResults/' + r.name}>
+  return props.results.map(r => (
+      <option key={r.item_id} value={r.name}>
+        {/* <Link to={'/SearchResults/' + r.name}> */}
           {r.name}
-        </Link>
-      </li>
-    ))}
-  </ul>
+        {/* </Link> */}
+      </option>
+    ))
 }
 
 export default Suggestions
