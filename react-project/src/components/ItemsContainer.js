@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import ItemTemplate from './ItemTemplate'
+import '../css/Template.css';
 
 class ItemsContainer extends Component {
     state = { item: [] }
@@ -27,7 +28,7 @@ class ItemsContainer extends Component {
       console.log("000000000000000000000000000000000000000000000");
       console.log(item);
       return (
-        <div>
+        <div id="itemContainer">
           { item.map(article => <ItemTemplate {...article} />) }
         </div>
        )

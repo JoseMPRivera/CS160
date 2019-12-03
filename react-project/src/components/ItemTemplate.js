@@ -11,7 +11,8 @@ const ItemTemplate = ({name, description, pic, price}) => (
           <a id = "productImg" target="_blank" href={'/itemImages/' + pic}>
               <img src={'/itemImages/' + pic} class="imageBox" alt="Mountains" width="200" height="150"/>
           </a>
-          <div class="desc">{description + "   url=   " + pic}}</div>
+          <div class="desc">{name}</div>
+          <div class="desc">{" price: $" + price}</div>
         </div>
     </div>
 

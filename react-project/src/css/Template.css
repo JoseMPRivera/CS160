@@ -1,11 +1,19 @@
+#itemContainer {
+    /* display: flex; */
+  padding-left: 200px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 99%;
+}
+
 .gallery {
     border-style: solid;
     border-color: #6D7993;
     width:25%;
     background-color: #9099A2;
     margin: 9px;
+    display: inline-block
   }
-
 
 .inner {
   display: table;
@@ -15,6 +23,6 @@
 }
 
 #productImg {
-    display: table;
+  display: table;
   margin: 0 auto;
 }

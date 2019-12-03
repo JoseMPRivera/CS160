@@ -93,6 +93,7 @@ export default class SellTemplate extends Component {
             </form> 
             </div> */}
 
+            <div id="idForm"> 
             <h1>Sell in SpartanSells</h1>
 
             {/* <form id = "resizeFormSignUp" method="POST" action="/submit-item"> */}
@@ -131,7 +132,7 @@ export default class SellTemplate extends Component {
 
 
 
-          </div>
+      </div></div>
 
         );
     }
