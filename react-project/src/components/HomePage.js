@@ -4,7 +4,6 @@ import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Carousel } from 'r
 import HomeBar from './HomeBar';
 import Search from './Search';
 import ItemsContainer from './ItemsContainer';
-// import Upload from './Upload';
 
 export default class HomePage extends Component {
   render() {
@@ -18,15 +17,11 @@ export default class HomePage extends Component {
           <Navbar.Collapse id="basic-navbar-nav">
 
             <Form   inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+              <Search />
               <Button variant="outline-success">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Navbar>
-
-
-      <Search />
-
 
   <div class ="carousel-homepage">
   <Carousel >
@@ -72,7 +67,6 @@ export default class HomePage extends Component {
 </div>
 
 <ItemsContainer/>
-{/* <Upload/> */}
 
    </div>
     );
