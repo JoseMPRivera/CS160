@@ -3,7 +3,10 @@ import { Button, FormGroup, FormControl } from "react-bootstrap";
 import '../css/Login.css';
 import { faTextWidth } from '@fortawesome/free-solid-svg-icons';
 import { Nav, NavDropdown } from 'react-bootstrap';
-import HomeBar from './HomeBar'
+import HomeBar from './HomeBar';
+import axios from 'axios';
+const jwt = require('jsonwebtoken');
+
 
 export default class Login extends Component {
   constructor(props) {
@@ -24,7 +27,25 @@ export default class Login extends Component {
   }
 
   handleSubmit = event => {
+    const {email, password} = this.state;
     event.preventDefault();
+    axios.post(
+      '/login',
+      { email,password}
+    ).then(res => {
+      const token = res.headers["x-auth-token"];
+      console.log(token)
+      sessionStorage.setItem('authtoken', token);
+      const decoded = jwt.decode(token);
+      const {user_id, first_name, last_name} = decoded;
+      console.log(decoded);
+      sessionStorage.setItem('id', user_id);
+      sessionStorage.setItem('first_name', first_name);
+      sessionStorage.setItem('last_name', last_name);
+      console.log('logged in')
+    })
+    .catch(err => console.log(err));
+
   }
   render() {
     return (

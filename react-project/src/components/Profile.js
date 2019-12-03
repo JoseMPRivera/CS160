@@ -21,7 +21,8 @@ export default class Profile extends Component {
 
                 <div class="profile-usertitle">
                   <div class="profile-usertitle-name">
-                    John Smith
+                  {sessionStorage.getItem("first_name") + " "} 
+                  {sessionStorage.getItem("last_name")}
                   </div>
                   <div class="profile-usertitle-job">
                     First Year
@@ -57,7 +58,6 @@ export default class Profile extends Component {
 
             <div class="col-md-9">
               <div class="profile-content">
-                Some user related content goes here
               </div>
             </div>
 
