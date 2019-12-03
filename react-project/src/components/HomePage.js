@@ -38,8 +38,8 @@ export default class HomePage extends Component {
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <h3>Play Station 4</h3>
+      <p>Fortnite Neo Versa PS4™ Bundle</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -64,8 +64,8 @@ export default class HomePage extends Component {
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h3>Xiaomi</h3>
+      <p>Xiaomi Mi M365 Electric Scooter.</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
