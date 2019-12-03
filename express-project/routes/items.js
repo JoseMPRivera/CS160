@@ -10,7 +10,6 @@ module.exports = function(app, connection)
     })
   })
 
-  app.get('/items', function(req, res) {
   app.get('/search/:query', function(req, res) {
     console.log(req.params.query)
     connection.query(`SELECT DISTINCT name FROM items WHERE name LIKE '${req.params.query}%'`, function(err ,data) {

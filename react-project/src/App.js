@@ -8,7 +8,6 @@ import signUp from './components/signUp'
 import Rating from './components/Rating'
 import Profile from './components/Profile'
 import SellItem from './components/SellTemplate'
-import SearchResults from './components/SearchResults' 
 import SearchResults from './components/SearchResults'
 import SearchResult from './components/SearchResult'
 import './App.css';
