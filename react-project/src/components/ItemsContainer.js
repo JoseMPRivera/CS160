@@ -10,7 +10,7 @@ class ItemsContainer extends Component {
 
       console.log("It did mount");
 
-      axios.get('./items')
+      axios.get('/items')
       .then(({ data }) => {
         console.log(data)
         // console.log(data.items + "nooooooooooooooooooooooooooo");
