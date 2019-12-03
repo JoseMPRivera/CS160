@@ -54,7 +54,7 @@ render() {
       <Route path="/signUp" component={signUp} />
       <Route path="/Rating" component={Rating} />
       <Route path="/Profile" component={Profile} />
-      <Route path="/SearchResults" component={SearchResults} />
+      <Route path="/SearchResults/:query" component={SearchResults} />
       <p className="App-intro">{this.state.data}</p>
     </Router>
     
