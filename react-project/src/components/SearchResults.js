@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import axios from 'axios';
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Carousel } from 'react-bootstrap';
+import HomeBar from './HomeBar';
+import Search from './Search';
 
 export default class SearchResults extends Component {
 
@@ -27,8 +30,19 @@ export default class SearchResults extends Component {
   render() {
     return (
       <div>
+        <HomeBar />
+        <Navbar bg="light" expand="lg">
+          <Navbar.Brand href="/">Spartan Sells</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Form   inline>
+              <Search />
+              <Button variant="outline-success">Search</Button>
+            </Form>
+          </Navbar.Collapse>
+        </Navbar>
         Results for '{this.state.query}' <br /><br />
-        {this.state.results.map((result, index) => (
+        {this.state.results.map(result => (
           <ul>
             <li key={result.item_id}>
               <Link to={{
@@ -40,8 +54,8 @@ export default class SearchResults extends Component {
                 <label> 
                   name: {result.name} <br />
                   description: {result.description} <br />
-                  price: ${result.price}  <br />
-                  seller: {result.seller_name} <br /> 
+                  price: ${result.price} <br />
+                  seller: {result.seller_name}
                 </label>
               </Link>
             </li>
