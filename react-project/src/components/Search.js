@@ -55,7 +55,6 @@ export default class Search extends Component {
               this.setState({ redirect : true }, console.log("enter"))
           }}
         />
-        {/* <Suggestions results={this.state.results} /> */}
         <datalist id="encodings" onChange={() => this.setState({ redirect : true }, console.log("enter"))}>
           <Suggestions results={this.state.results} />
         </datalist>

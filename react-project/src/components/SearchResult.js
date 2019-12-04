@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Carousel } from 'react-bootstrap';
+import HomeBar from './HomeBar';
+import Search from './Search';
 
 export default class SearchResult extends Component {
 
@@ -13,11 +16,24 @@ export default class SearchResult extends Component {
   render() {
     const {result} = this.props.location.state
     return (
-      <label> 
-        name: {result.name} <br />
-        description: {result.description} <br />
-        price: ${result.price} 
-    </label>
+      <div>
+        <HomeBar />
+        <Navbar bg="light" expand="lg">
+          <Navbar.Brand href="/">Spartan Sells</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Form   inline>
+              <Search />
+              <Button variant="outline-success">Search</Button>
+            </Form>
+          </Navbar.Collapse>
+        </Navbar>
+        <label> 
+          name: {result.name} <br />
+          description: {result.description} <br />
+          price: ${result.price} 
+        </label>
+      </div>
     );
   }
 }
