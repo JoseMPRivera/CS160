@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Carousel } from 'react-bootstrap';
+import { Nav, NavDropdown } from 'react-bootstrap';
 
 class HomeBar extends Component {
   render() {
@@ -19,9 +19,6 @@ class HomeBar extends Component {
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="/SellItem">Sell <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
             </li>
           </ul>
         </div>

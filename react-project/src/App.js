@@ -12,9 +12,6 @@ import SearchResults from './components/SearchResults'
 import SearchResult from './components/SearchResult'
 import seeItem from './components/seeItem'
 import './App.css';
-import Search from './components/Search';
-
-
 
 class App extends Component {
   state = {
@@ -58,7 +55,7 @@ render() {
       <Route path="/Rating" component={Rating} />
       <Route path="/Profile" component={Profile} />
       <Route path="/SellItem" component={SellItem} />
-      <Route path="/SearchResults/:query" component={SearchResults} />
+      <Route path="/SearchResults/:query" render={props => <SearchResults key={props.match.params.query} {...props} />} />
       <Route path="/SearchResult" component={SearchResult} />
       <Route path="/seeItem" component={seeItem} />
       <p className="App-intro">{this.state.data}</p>

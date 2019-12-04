@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Carousel } from 'react-bootstrap';
+import { Navbar, Form, Button } from 'react-bootstrap';
 import HomeBar from './HomeBar';
 import Search from './Search';
 
 export default class SearchResult extends Component {
-
-  state = {
-    result: {}
-  }
-
-  // componentDidMount() {
-  //   this.setState({ result: this.props.location.state.result }, console.log('result = ' + this.state.result))
-  // }
 
   render() {
     const {result} = this.props.location.state

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import axios from 'axios';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Carousel } from 'react-bootstrap';
+import { Navbar, Form, Button } from 'react-bootstrap';
 import HomeBar from './HomeBar';
 import Search from './Search';
 
