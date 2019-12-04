@@ -57,7 +57,7 @@ app.post('/submit-item', (req, res) => {
   con.getConnection(function(err) {
     if (err) throw err;
     var sql = "INSERT INTO items (name, description, pic, price, seller_id, seller_name,seller_email) VALUES ('" + title + "', '" + desc +
-                "', 'm365.jpg', '" + price +  "', '" + sellerId + "', '" + sellerName + "', '" + sellerEmail + "')";
+                "', 'thermos.jpg', '" + price +  "', '" + sellerId + "', '" + sellerName + "', '" + sellerEmail + "')";
     con.query(sql, function (err, result) {
       if (err) throw err;
       console.log("1 record inserted");
