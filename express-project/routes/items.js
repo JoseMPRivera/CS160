@@ -23,4 +23,11 @@ module.exports = function(app, connection)
       (err)?res.send(err):res.json({items: data})
     })
   })
+
+  app.get('/sellItems/:id', function(req, res) {
+    console.log(req.params.id)
+    connection.query('SELECT * FROM items WHERE seller_id=' + req.params.id, function(err ,data) {
+      (err)?res.send(err):res.json({items: data})
+    })
+  })
 }

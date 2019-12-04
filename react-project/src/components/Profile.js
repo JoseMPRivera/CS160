@@ -3,6 +3,8 @@ import '../css/Profile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faFlag } from '@fortawesome/free-solid-svg-icons'
 import HomeBar from './HomeBar'
+// import ItemsContainer from './ItemsContainer'
+import SellsContainer from './SellsContainer'
 
 export default class Profile extends Component {
 
@@ -38,17 +40,17 @@ export default class Profile extends Component {
                     <li class="active">
                       <a href="#">
                       <FontAwesomeIcon icon={faHome}/>
-                      Overview </a>
+                      {' '} Overview </a>
                     </li>
                     <li>
                       <a href="#">
                       <FontAwesomeIcon icon={faUser}/>
-                      Account Settings </a>
+                      {' '} Account Settings </a>
                     </li>
                     <li>
                       <a href="#">
                       <FontAwesomeIcon icon={faFlag}/>
-                      Help </a>
+                      {' '} Help </a>
                     </li>
                   </ul>
                 </div>
@@ -56,8 +58,9 @@ export default class Profile extends Component {
               </div>
             </div>
 
-            <div class="col-md-9">
+            <div class="col-12">
               <div class="profile-content">
+                <SellsContainer />
               </div>
             </div>
 
