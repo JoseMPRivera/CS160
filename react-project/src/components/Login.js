@@ -37,11 +37,12 @@ export default class Login extends Component {
       console.log(token)
       sessionStorage.setItem('authtoken', token);
       const decoded = jwt.decode(token);
-      const {user_id, first_name, last_name} = decoded;
+      const {user_id, first_name, last_name, email} = decoded;
       console.log(decoded);
       sessionStorage.setItem('id', user_id);
       sessionStorage.setItem('first_name', first_name);
       sessionStorage.setItem('last_name', last_name);
+      sessionStorage.setItem('email', email);
       console.log('logged in')
     })
     .catch(err => console.log(err));

@@ -40,7 +40,8 @@ export default class SearchResults extends Component {
                 <label> 
                   name: {result.name} <br />
                   description: {result.description} <br />
-                  price: ${result.price} 
+                  price: ${result.price}  <br />
+                  seller: {result.seller_name} <br /> 
                 </label>
               </Link>
             </li>

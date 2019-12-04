@@ -11,7 +11,7 @@ export default class SellTemplate extends Component {
     this.state = {
       title: '',
       price: '',
-      description: '',
+      description: ''
     };
   }
 
@@ -45,12 +45,19 @@ export default class SellTemplate extends Component {
     handleSubmit = e => {
       e.preventDefault();
   
-      const { title, price, description } = this.state;
+      const { title, price, description} = this.state;
+
+        const sellerName = sessionStorage.getItem("first_name");
+        const sellerId = sessionStorage.getItem("id");
+        const sellerEmail = sessionStorage.getItem("email");
   
       const item = {
         title,
         price,
         description,
+        sellerId,
+        sellerName,
+        sellerEmail
       };
 
       

@@ -4,7 +4,7 @@ const registerRouter = require('./routes/register');
 const loginRouter = require('./routes/login');
 const bodyParser = require('body-parser')
 const port = 5000 || process.env.PORT;
-
+var con = require('./my_modules/database');
 // console.log that your server is up and running
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
@@ -40,17 +40,24 @@ app.post('/submit-item', (req, res) => {
   const title = req.body.title;
   const price = req.body.price;
   const desc = req.body.description;
+  const sellerName = req.body.sellerName;
+  const sellerId = req.body.sellerId;
+  const sellerEmail = req.body.sellerEmail;
 
   (error)=>{console.info(error.config);}
 
   console.log("\n================================= " + title)
   console.log("\n================================= " + price)
   console.log("\n================================= " + desc)
-
-  con.connect(function(err) {
+  console.log("\n================================= " + sellerName)
+  console.log("\n================================= " + sellerEmail)
+  console.log("\n================================= " + sellerId)
+// var sql = "INSERT INTO items (name, description, pic, price, seller_id, seller_name,seller_email) VALUES ('" + title + "', '" + desc +
+//"', 'm365.jpg', '" + price + "')";
+  con.getConnection(function(err) {
     if (err) throw err;
-    var sql = "INSERT INTO items (name, description, pic, price) VALUES ('" + title + "', '" + desc +
-                "', 'm365.jpg', '" + price + "')";
+    var sql = "INSERT INTO items (name, description, pic, price, seller_id, seller_name,seller_email) VALUES ('" + title + "', '" + desc +
+                "', 'm365.jpg', '" + price +  "', '" + sellerId + "', '" + sellerName + "', '" + sellerEmail + "')";
     con.query(sql, function (err, result) {
       if (err) throw err;
       console.log("1 record inserted");
@@ -60,7 +67,7 @@ app.post('/submit-item', (req, res) => {
   res.end()
 })
 
-var con = require('./my_modules/database');
+
 
 // app.post('/upload2', (req, res, next) => {
 //   console.log("\n\n\n ===========================================================\n\n");

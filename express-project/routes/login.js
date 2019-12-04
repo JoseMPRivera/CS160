@@ -17,6 +17,7 @@ router.post("/", async (req, res) => {
         function(error, result) {
             if (result.length === 1) {
                 const token = tokengen(result[0]);
+                //console.log("Our token: " + tokengen(result[0]));
                 return res.header("x-auth-token", token).send("logged in");
             }
             return res.status(401).send("Email or password incorrect");
