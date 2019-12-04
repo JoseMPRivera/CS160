@@ -26,7 +26,7 @@ export default class Search extends Component {
     this.setState({
       query: this.search.value
     }, () => {
-      if (this.state.query && this.state.query.length > 1) {
+      if (this.state.query && this.state.query.length > 0) {
         this.getInfo()
       }
       else

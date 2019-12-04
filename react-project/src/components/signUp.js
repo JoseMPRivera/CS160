@@ -37,6 +37,7 @@ export default class signUp extends Component {
       {first_name, last_name, email, city,password, address, zip: zipcode}
     ).then(res => {
       console.log('registered')
+      this.props.history.push('/Login')
     })
     .catch(err => console.log(err));
   }

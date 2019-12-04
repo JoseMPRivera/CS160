@@ -44,6 +44,7 @@ export default class Login extends Component {
       sessionStorage.setItem('last_name', last_name);
       sessionStorage.setItem('email', email);
       console.log('logged in')
+      this.props.history.push('/')
     })
     .catch(err => console.log(err));
 
