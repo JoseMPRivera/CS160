@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 // create a GET route
 app.get('/express_backend', (req, res) => {
-  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+  res.send({ express: '' });
 });
 
 app.use(express.json());

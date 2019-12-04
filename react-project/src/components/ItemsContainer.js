@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 import ItemTemplate from './ItemTemplate'
 import '../css/Template.css';
@@ -29,7 +30,16 @@ class ItemsContainer extends Component {
       console.log(item);
       return (
         <div id="itemContainer">
-          { item.map(article => <ItemTemplate {...article} />) }
+          { item.map(article =>
+            
+            <Link to={{
+              pathname: '/SearchResult', 
+              state: { 
+                result : {...article}
+              }
+            }}>
+              <ItemTemplate {...article} />
+            </Link> )}
         </div>
        )
      }

@@ -6,6 +6,36 @@
   width: 99%;
 }
 
+.seeItem{
+  border-style: solid;
+  margin: 80px;
+  background-color: rgb(58, 107, 143);
+}
+
+.searchImageOuter {
+  border-style: solid;
+  display: flex;
+  
+  background-color: #226b88;
+}
+
+.searchImage {
+  display: table;
+  border-style: solid;
+}
+
+.searchInfo {
+  margin: 30px;
+  display: table;
+  /* border-style: solid; */
+}
+
+.sellerInfo {
+  margin: 30px;
+  display: table;
+  /* border-style: solid; */
+}
+
 .gallery {
     border-style: solid;
     border-color: #6D7993;
