@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Navbar, Form, Button } from 'react-bootstrap';
 import HomeBar from './HomeBar';
 import Search from './Search';
+import ItemTemplate from './ItemTemplate'
 
 export default class SearchResults extends Component {
 
@@ -28,6 +29,8 @@ export default class SearchResults extends Component {
   }
 
   render() {
+    for (var i = 0; i < this.state.results.length; i++)
+      console.log(this.state.results[i].name)
     return (
       <div>
         <HomeBar />
@@ -42,24 +45,23 @@ export default class SearchResults extends Component {
           </Navbar.Collapse>
         </Navbar>
         Results for '{this.state.query}' <br /><br />
+        <div id="itemContainer">
         {this.state.results.map(result => (
-          <ul>
-            <li key={result.item_id}>
-              <Link to={{
-                pathname: '/SearchResult', 
-                state: { 
-                  result : result
-                }
-              }}>
-                <label> 
-                  name: {result.name} <br />
-                  description: {result.description} <br />
-                  price: ${result.price}
-                </label>
-              </Link>
-            </li>
-          </ul>)
-        )}
+          <Link key={result.name} to={{
+            pathname: '/SearchResult', 
+            state: { 
+              result : result
+            }
+          }}>
+            {/* <label> 
+              name: {result.name} <br />
+              description: {result.description} <br />
+              price: ${result.price}
+            </label> */}
+            <ItemTemplate {...result} />
+          </Link>
+        ))}
+        </div>
       </div>
     );
   }
