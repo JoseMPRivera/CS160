@@ -37,7 +37,7 @@ export default class Search extends Component {
   }
 
   render() {
-    if (this.state.redirect === true) {
+    if (this.state.redirect === true && this.state.query.length > 0) {
       this.state.redirect = false
       return <Redirect push to={'/SearchResults/' + this.search.value} />
     }
@@ -52,7 +52,7 @@ export default class Search extends Component {
           onChange={this.handleInputChange}
           onKeyPress={event => {
             if (event.key === 'Enter')
-              this.setState({ redirect : true }, console.log("enter"))
+              this.setState({ redirect : true })
           }}
         />
         <datalist id="encodings" onChange={() => this.setState({ redirect : true }, console.log("enter"))}>
